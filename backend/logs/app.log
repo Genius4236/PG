@@ -1,0 +1,158 @@
+2025-11-08 11:08:48,025 - bookmypg - INFO - Request: OPTIONS /api/auth/signup
+2025-11-08 11:08:48,027 - bookmypg - INFO - Response: 200 - 0.002s
+2025-11-08 11:08:48,032 - bookmypg - INFO - Request: POST /api/auth/signup
+2025-11-08 15:56:03 [INFO]: Server running on port 5000
+2025-11-08 15:56:21 [INFO]: GET /api
+2025-11-08 15:56:28 [INFO]: GET /api
+2025-11-08 16:02:06 [INFO]: Server running on port 5000
+2025-11-08 20:13:01 [INFO]: Server running on port 5000
+2025-11-08 20:13:53 [INFO]: Server running on port 5000
+2025-11-08 21:14:26 [INFO]: Server running on port 5000
+2025-11-08 21:27:51 [INFO]: Server running on port 5000
+2025-11-08 21:36:03 [INFO]: Server running on port 5000
+2025-11-08 22:09:24 [INFO]: Server running on port 5000
+2025-11-08 22:12:39 [INFO]: Server running on port 5000
+2025-11-08 22:14:15 [INFO]: Server running on port 5000
+2025-11-08 22:25:33 [INFO]: Server running on port 5000
+2025-11-08 22:27:36 [INFO]: Server running on port 5000
+2025-11-08 22:30:51 [INFO]: Server running on port 5000
+2025-11-08 22:31:15 [INFO]: Server running on port 5000
+2025-11-08 22:34:50 [INFO]: Server running on port 5000
+2025-11-08 22:35:55 [INFO]: Server running on port 5000
+2025-11-08 23:07:25 [INFO]: Server running on port 5000
+2025-11-08 23:08:10 [INFO]: Server running on port 5000
+2025-11-08 23:11:18 [INFO]: Server running on port 5000
+2025-11-08 23:12:23 [INFO]: Server running on port 5000
+2025-11-08 23:13:07 [INFO]: Server running on port 5000
+2025-11-08 23:21:32 [INFO]: Server running on port 5000
+2025-11-08 23:27:26 [INFO]: Server running on port 5000
+2025-11-09 16:21:15 [INFO]: Server running on port 5000
+2025-11-09 16:23:26 [INFO]: Server running on port 5000
+2025-11-09 16:40:37 [INFO]: Server running on port 5000
+2025-11-09 16:42:26 [INFO]: POST /api/auth/signup
+2025-11-09 16:42:32 [INFO]: POST /api/auth/signup
+2025-11-09 16:42:38 [INFO]: POST /api/auth/signup
+2025-11-09 16:42:44 [INFO]: POST /api/auth/signup
+2025-11-09 16:43:42 [INFO]: POST /api/auth/login
+2025-11-09 16:43:50 [INFO]: POST /api/auth/login
+2025-11-09 16:43:58 [INFO]: GET /health
+2025-11-11 22:52:22 [INFO]: Server running on port 5000
+2025-11-11 22:53:38 [INFO]: Server running on port 5000
+2025-11-11 22:54:34 [INFO]: POST /api/auth/signup
+2025-11-11 22:56:50 [INFO]: GET /api/pgs
+2025-11-11 22:56:50 [INFO]: GET /api/pgs
+2025-11-11 22:57:12 [INFO]: POST /api/auth/login
+2025-11-11 22:57:55 [INFO]: POST /api/auth/signup
+2025-11-11 23:37:46 [INFO]: GET /api/pgs
+2025-11-11 23:37:46 [INFO]: GET /api/pgs
+2025-11-12 22:13:38 [INFO]: Server running on port 5000
+2025-11-12 22:15:23 [INFO]: GET /api/pgs
+2025-11-12 22:15:24 [INFO]: GET /api/pgs
+2025-11-12 22:15:39 [INFO]: POST /api/auth/login
+2025-11-12 22:15:49 [INFO]: GET /api/pgs
+2025-11-12 22:15:49 [INFO]: GET /api/pgs
+2025-11-12 22:15:55 [INFO]: POST /api/auth/login
+2025-11-12 22:16:23 [INFO]: POST /api/auth/login
+2025-11-12 22:16:38 [INFO]: POST /api/auth/login
+2025-11-12 22:17:00 [INFO]: GET /api/pgs
+2025-11-12 22:17:00 [INFO]: GET /api/pgs
+2025-11-12 22:17:04 [INFO]: GET /api/pgs
+2025-11-12 22:17:04 [INFO]: GET /api/pgs
+2025-11-12 22:25:41 [INFO]: POST /api/auth/login
+2025-11-12 22:25:54 [INFO]: GET /api/pgs
+2025-11-12 22:25:54 [INFO]: GET /api/pgs
+2025-11-12 22:26:07 [INFO]: GET /api/pgs
+2025-11-12 22:26:07 [INFO]: GET /api/pgs
+2025-11-12 22:26:34 [INFO]: POST /api/auth/login
+2025-11-12 22:27:01 [INFO]: POST /api/auth/login
+2025-11-12 22:27:43 [INFO]: POST /api/auth/login
+2025-11-12 22:27:57 [INFO]: POST /api/auth/login
+2025-11-12 22:30:07 [INFO]: POST /api/auth/login
+2025-11-12 22:30:49 [INFO]: GET /api/user/bookings
+2025-11-12 22:30:49 [INFO]: GET /api/user/bookings
+2025-11-12 22:31:20 [INFO]: GET /api/pgs
+2025-11-12 22:31:20 [INFO]: GET /api/pgs
+2025-11-12 23:15:06 [INFO]: POST /api/auth/login
+2025-11-12 23:15:37 [INFO]: POST /api/auth/login
+2025-11-12 23:20:36 [INFO]: POST /api/auth/login
+2025-11-12 23:22:38 [INFO]: GET /api/pgs
+2025-11-12 23:22:38 [INFO]: GET /api/pgs
+2025-11-12 23:22:41 [INFO]: GET /api/user/bookings
+2025-11-12 23:22:42 [INFO]: GET /api/user/bookings
+2025-11-12 23:23:34 [INFO]: GET /api/pgs
+2025-11-12 23:23:34 [INFO]: GET /api/pgs
+2025-11-12 23:23:53 [INFO]: POST /api/auth/login
+2025-11-12 23:24:09 [INFO]: POST /api/auth/login
+2025-11-12 23:24:43 [INFO]: POST /api/auth/login
+2025-11-12 23:24:57 [INFO]: GET /api/pgs/1
+2025-11-12 23:24:57 [INFO]: GET /api/pgs/1
+2025-11-12 23:24:58 [INFO]: GET /api/pgs/1
+2025-11-12 23:24:58 [INFO]: GET /api/pgs/1
+2025-11-12 23:25:00 [INFO]: GET /api/pgs
+2025-11-12 23:25:00 [INFO]: GET /api/pgs
+2025-11-12 23:32:24 [INFO]: GET /api/pgs/2
+2025-11-12 23:32:24 [INFO]: GET /api/pgs/2
+2025-11-12 23:32:25 [INFO]: GET /api/pgs/2
+2025-11-12 23:32:25 [INFO]: GET /api/pgs/2
+2025-11-12 23:32:28 [INFO]: GET /api/pgs
+2025-11-12 23:32:28 [INFO]: GET /api/pgs
+2025-11-12 23:32:36 [INFO]: GET /api/pgs/3
+2025-11-12 23:32:36 [INFO]: GET /api/pgs/3
+2025-11-12 23:32:37 [INFO]: GET /api/pgs/3
+2025-11-12 23:32:37 [INFO]: GET /api/pgs/3
+2025-11-12 23:32:38 [INFO]: GET /api/pgs
+2025-11-12 23:32:39 [INFO]: GET /api/pgs
+2025-11-12 23:32:42 [INFO]: GET /api/owner/pgs
+2025-11-12 23:32:42 [INFO]: GET /api/owner/bookings
+2025-11-12 23:32:42 [INFO]: GET /api/owner/pgs
+2025-11-12 23:32:42 [INFO]: GET /api/owner/bookings
+2025-11-12 23:33:56 [INFO]: GET /api/owner/pgs
+2025-11-12 23:33:56 [INFO]: GET /api/owner/bookings
+2025-11-12 23:33:56 [INFO]: GET /api/owner/pgs
+2025-11-12 23:33:56 [INFO]: GET /api/owner/bookings
+2025-11-12 23:38:28 [INFO]: GET /api/pgs
+2025-11-12 23:38:28 [INFO]: GET /api/pgs
+2025-11-12 23:38:48 [INFO]: GET /api/pgs/:id
+2025-11-12 23:38:48 [INFO]: GET /api/pgs/:id
+2025-11-12 23:38:49 [INFO]: GET /api/pgs/:id
+2025-11-12 23:38:49 [INFO]: GET /api/pgs/:id
+2025-11-12 23:38:51 [INFO]: GET /api/pgs
+2025-11-12 23:38:51 [INFO]: GET /api/pgs
+2025-11-12 23:39:20 [INFO]: POST /api/auth/login
+2025-11-12 23:39:29 [INFO]: GET /api/user/bookings
+2025-11-12 23:39:29 [INFO]: GET /api/user/bookings
+2025-11-12 23:40:04 [INFO]: POST /api/auth/login
+2025-11-12 23:40:11 [INFO]: GET /api/owner/pgs
+2025-11-12 23:40:11 [INFO]: GET /api/owner/bookings
+2025-11-12 23:40:11 [INFO]: GET /api/owner/pgs
+2025-11-12 23:40:11 [INFO]: GET /api/owner/bookings
+2025-11-12 23:44:15 [INFO]: GET /api/owner/pgs
+2025-11-12 23:44:15 [INFO]: GET /api/owner/bookings
+2025-11-12 23:44:22 [INFO]: GET /api/owner/pgs
+2025-11-12 23:44:22 [INFO]: GET /api/owner/bookings
+2025-11-12 23:44:22 [INFO]: GET /api/owner/pgs
+2025-11-12 23:44:22 [INFO]: GET /api/owner/bookings
+2025-11-14 22:50:04 [INFO]: Server running on port 5000
+2025-11-14 22:52:11 [INFO]: Server running on port 5000
+2025-11-14 22:53:58 [INFO]: POST /api/auth/login
+2025-11-14 22:54:08 [INFO]: GET /api/pgs
+2025-11-14 22:54:08 [INFO]: GET /api/pgs
+2025-11-14 22:54:12 [INFO]: GET /api/pgs
+2025-11-14 22:54:12 [INFO]: GET /api/pgs
+2025-11-14 22:54:30 [INFO]: POST /api/auth/login
+2025-11-14 22:54:47 [INFO]: GET /api/owner/pgs
+2025-11-14 22:54:47 [INFO]: GET /api/owner/bookings
+2025-11-14 22:54:47 [INFO]: GET /api/owner/pgs
+2025-11-14 22:54:47 [INFO]: GET /api/owner/bookings
+2025-11-14 22:58:27 [INFO]: GET /api/owner/pgs
+2025-11-14 22:58:27 [INFO]: GET /api/owner/bookings
+2025-11-14 22:58:30 [INFO]: GET /api/owner/pgs
+2025-11-14 22:58:30 [INFO]: GET /api/owner/bookings
+2025-11-14 22:58:30 [INFO]: GET /api/owner/pgs
+2025-11-14 22:58:30 [INFO]: GET /api/owner/bookings
+2025-11-14 23:09:02 [INFO]: GET /api/owner/pgs
+2025-11-14 23:09:02 [INFO]: GET /api/owner/bookings
+2025-11-14 23:09:05 [INFO]: GET /api/owner/pgs
+2025-11-14 23:09:05 [INFO]: GET /api/owner/bookings
+2025-11-14 23:09:05 [INFO]: GET /api/owner/pgs
+2025-11-14 23:09:05 [INFO]: GET /api/owner/bookings
