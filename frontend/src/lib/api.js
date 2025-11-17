@@ -57,31 +57,31 @@ api.interceptors.response.use(
 
 // Auth API calls
 export const authAPI = {
-  login: (credentials) => api.post('/api/auth/login', credentials),
-  signup: (userData) => api.post('/api/auth/signup', userData),
+  login: (credentials) => api.post('/auth/login', credentials),
+  signup: (userData) => api.post('/auth/signup', userData),
 };
 
 // PG API calls
 export const pgAPI = {
-  getPGs: (params) => api.get('/api/pgs', { params }),
-  getPG: (id) => api.get(`/api/pgs/${id}`),
+  getPGs: (params) => api.get('/pgs', { params }),
+  getPG: (id) => api.get(`/pgs/${id}`),
   createPG: (pgData) => {
     // If pgData is FormData, set proper headers
     const config = pgData instanceof FormData ? {
       headers: { 'Content-Type': 'multipart/form-data' }
     } : {};
-    return api.post('/api/pgs', pgData, config);
+    return api.post('/pgs', pgData, config);
   },
-  updatePG: (id, pgData) => api.put(`/api/pgs/${id}`, pgData),
-  deletePG: (id) => api.delete(`/api/pgs/${id}`),
-  getOwnerPGs: () => api.get('/api/owner/pgs'),
+  updatePG: (id, pgData) => api.put(`/pgs/${id}`, pgData),
+  deletePG: (id) => api.delete(`/pgs/${id}`),
+  getOwnerPGs: () => api.get('/owner/pgs'),
 };
 
 // Booking API calls
 export const bookingAPI = {
-  createBooking: (bookingData) => api.post('/api/bookings', bookingData),
-  getUserBookings: () => api.get('/api/user/bookings'),
-  getOwnerBookings: () => api.get('/api/owner/bookings'),
+  createBooking: (bookingData) => api.post('/bookings', bookingData),
+  getUserBookings: () => api.get('/user/bookings'),
+  getOwnerBookings: () => api.get('/owner/bookings'),
 };
 
 export default api;
