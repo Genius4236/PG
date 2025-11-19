@@ -14,6 +14,11 @@ import authRoutes from "./routes/auth.js";
 import pgRoutes from "./routes/pg.js";
 import bookingRoutes from "./routes/booking.js";
 
+// Import models and middleware for legacy routes
+import { protect, authorize } from "./middleware/auth.js";
+import { PG } from "./models/PG.js";
+import { Booking } from "./models/Booking.js";
+
 // Initialize express app
 const app = express();
 
@@ -70,6 +75,52 @@ app.use("/api/auth", authRoutes);
 app.use("/api/pgs", pgRoutes);
 app.use("/api/bookings", bookingRoutes);
 
+// ---------------------------------------------------------------------
+// Legacy frontend aliases (temporary) to support old clients calling:
+//   GET /api/owner/pgs        -> canonical: GET /api/pgs/owner/mine
+//   GET /api/owner/bookings   -> canonical: GET /api/bookings/owner/mine
+// These keep older builds working while frontend is migrated.
+// ---------------------------------------------------------------------
+app.get(
+  "/api/owner/pgs",
+  protect,
+  authorize("owner"),
+  async (req, res) => {
+    try {
+      logger.info("LEGACY /api/owner/pgs HIT for user " + req.user._id);
+      const pgs = await PG.find({ owner_id: req.user._id }).sort({
+        createdAt: -1,
+      });
+      return res.json({ pgs });
+    } catch (err) {
+      logger.error("Error on legacy /api/owner/pgs", err);
+      return res.status(500).json({ message: "Server error" });
+    }
+  }
+);
+
+app.get(
+  "/api/owner/bookings",
+  protect,
+  authorize("owner"),
+  async (req, res) => {
+    try {
+      logger.info("LEGACY /api/owner/bookings HIT for user " + req.user._id);
+      if (!Booking) {
+        logger.info('Booking model unavailable; returning empty bookings array for legacy alias.');
+        return res.json({ bookings: [] });
+      }
+      const bookings = await Booking.find({ owner_id: req.user._id }).sort({
+        createdAt: -1,
+      });
+      return res.json({ bookings });
+    } catch (err) {
+      logger.error("Error on legacy /api/owner/bookings", err);
+      return res.status(500).json({ message: "Server error" });
+    }
+  }
+);
+
 // Simple health endpoints without plugin
 app.get("/health", (req, res) => {
   const dbState = mongoose.connection.readyState;
@@ -103,6 +154,29 @@ app.use((err, req, res, next) => {
 app.use("*", (req, res) => {
   res.status(404).json({ message: "Route not found" });
 });
+
+// Debug: list registered routes (helps confirm available endpoints)
+function listRoutes(app) {
+  const routes = [];
+  const stack = app._router && app._router.stack ? app._router.stack : [];
+  stack.forEach((middleware) => {
+    if (middleware.route) {
+      const methods = Object.keys(middleware.route.methods).join(',').toUpperCase();
+      routes.push(`${methods} ${middleware.route.path}`);
+    } else if (middleware.name === 'router' && middleware.handle && middleware.handle.stack) {
+      middleware.handle.stack.forEach((handler) => {
+        if (handler.route) {
+          const methods = Object.keys(handler.route.methods).join(',').toUpperCase();
+          routes.push(`${methods} ${handler.route.path}`);
+        }
+      });
+    }
+  });
+  logger.info('Registered routes:\n' + routes.join('\n'));
+}
+
+// call after routes are registered but before listen()
+listRoutes(app);
 
 // Start server
 const PORT = process.env.PORT || 5000;

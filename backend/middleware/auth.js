@@ -47,3 +47,23 @@ export const authorize = (...roles) => {
 };
 
 
+// // middleware/auth.js
+// // export const jwt = require('jsonwebtoken');
+
+// // Example middleware — replace secret and token logic with your real implementation
+// module.exports = function (req, res, next) {
+//   const authHeader = req.headers.authorization;
+//   if (!authHeader || !authHeader.startsWith('Bearer ')) {
+//     return res.status(401).json({ message: 'No token provided' });
+//   }
+
+//   const token = authHeader.split(' ')[1];
+//   try {
+//     const payload = jwt.verify(token, process.env.JWT_SECRET || 'dev_secret'); // change in prod
+//     // payload should contain user id
+//     req.user = { id: payload.id };
+//     next();
+//   } catch (err) {
+//     return res.status(401).json({ message: 'Invalid token' });
+//   }
+// };

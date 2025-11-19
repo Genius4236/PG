@@ -59,6 +59,37 @@ router.get('/', async (req, res) => {
   }
 });
 
+// @desc    Get owner's PGs
+// @route   GET /api/pgs/owner/mine
+// @access  Private (Owner only)
+// ⚠️ MUST be before /:id route so it doesn't match as an ID
+router.get('/owner/mine', protect, authorize('owner'), async (req, res) => {
+  try {
+    console.log('🔵 GET /pgs/owner/mine HIT');
+    console.log('User ID:', req.user._id);
+    const pgs = await PG.find({ owner_id: req.user._id }).sort({ createdAt: -1 });
+    console.log('Found PGs:', pgs.length);
+    res.json({ pgs });
+  } catch (error) {
+    console.error('Error fetching owner PGs:', error);
+    res.status(500).json({ message: 'Server error' });
+  }
+});
+
+// @desc    Get owner's PGs (legacy alias)
+// @route   GET /api/owner/pgs  <-- legacy frontend path some clients use
+// @access  Private (Owner only)
+router.get('/owner/pgs', protect, authorize('owner'), async (req, res) => {
+  try {
+    console.log('🟠 LEGACY GET /api/owner/pgs HIT - forwarding to owner/mine logic');
+    const pgs = await PG.find({ owner_id: req.user._id }).sort({ createdAt: -1 });
+    return res.json({ pgs });
+  } catch (error) {
+    console.error('Error on legacy /owner/pgs route:', error);
+    return res.status(500).json({ message: 'Server error' });
+  }
+});
+
 // @desc    Get single PG
 // @route   GET /api/pgs/:id
 // @access  Public
@@ -81,6 +112,12 @@ router.get('/:id', async (req, res) => {
 // @route   POST /api/pgs
 // @access  Private (Owner only)
 router.post('/', protect, authorize('owner'), async (req, res) => {
+  console.log('🟢 POST /api/pgs HIT');
+  console.log('Headers:', req.headers);
+  console.log('User:', req.user);
+  console.log('Body keys:', Object.keys(req.body || {}));
+  console.log('Files keys:', req.files ? Object.keys(req.files) : 'no files');
+
   try {
     const { name, city, locality, address, gender, description, sharing_types, amenities } = req.body;
 
@@ -203,17 +240,4 @@ router.delete('/:id', protect, authorize('owner'), async (req, res) => {
   }
 });
 
-// @desc    Get owner's PGs
-// @route   GET /api/pgs/owner/mine
-// @access  Private (Owner only)
-router.get('/owner/mine', protect, authorize('owner'), async (req, res) => {
-  try {
-    const pgs = await PG.find({ owner_id: req.user._id }).sort({ createdAt: -1 });
-
-    res.json({ pgs });
-  } catch (error) {
-    console.error(error);
-    res.status(500).json({ message: 'Server error' });
-  }
-});
 export default router;

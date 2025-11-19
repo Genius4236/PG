@@ -15,7 +15,7 @@ export const sharingTypeSchema = new mongoose.Schema({
     type: Boolean,
     default: true
   }
-});
+},{ _id: false }); //this was added 
 
 export const pgSchema = new mongoose.Schema({
   name: {

@@ -6,14 +6,14 @@ export const cities = [
   { id: 3, name: 'Chennai', image: 'https://images.unsplash.com/photo-1582510003544-4d00b7f74220?w=400' },
   { id: 4, name: 'Coimbatore', image: 'https://images.unsplash.com/photo-1567157577867-05ccb1388e66?w=400' },
   { id: 5, name: 'Gurgaon', image: 'https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=400' },
-  { id: 6, name: 'Hyderabad', image: 'https://images.unsplash.com/photo-1508051123996-69f8caf4891e?w=400' },
+  { id: 6, name: 'Hyderabad', image: 'https://images.unsplash.com/photo-1505678261036-a3fcc5e884ee?w=400' },
   { id: 7, name: 'Indore', image: 'https://images.unsplash.com/photo-1605649487212-47bdab064df7?w=400' },
   { id: 8, name: 'Jaipur', image: 'https://images.unsplash.com/photo-1477587458883-47145ed94245?w=400' },
   { id: 9, name: 'Kolkata', image: 'https://images.unsplash.com/photo-1558431382-27e303142255?w=400' },
   { id: 10, name: 'Mumbai', image: 'https://images.unsplash.com/photo-1567157577867-05ccb1388e66?w=400' },
   { id: 11, name: 'New Delhi', image: 'https://images.unsplash.com/photo-1587474260584-136574528ed5?w=400' },
-  { id: 12, name: 'Noida', image: 'https://images.unsplash.com/photo-1580477371993-15a1e5849e93?w=400' },
-  { id: 13, name: 'Pune', image: 'https://images.unsplash.com/photo-1595657396131-5c415c44e8bb?w=400' }
+  { id: 12, name: 'Noida', image: 'https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=400' },
+  { id: 13, name: 'Pune', image: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=400' }
 ];
 
 export const offers = [

@@ -4,8 +4,8 @@ import { Building2, Facebook, Twitter, Instagram, Linkedin, Mail, Phone, MapPin 
 
 const Footer = () => {
   return (
-    <footer className="bg-[#003d5c] text-white">
-      <div className="container mx-auto px-4 py-12">
+    <footer className="bg-gradient-to-r from-slate-900 to-teal-600 text-gray-100">
+      <div className="container mx-auto px-6 py-16">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* About */}
           <div>
@@ -22,17 +22,17 @@ const Footer = () => {
               India's First network of managed Paying Guest rentals. Find and book your perfect PG online.
             </p>
             <div className="flex gap-3">
-              <a href="#" className="hover:text-cyan-400 transition">
-                <Facebook className="h-5 w-5" />
+              <a href="#" className="transition rounded-full p-2 hover:bg-white hover:text-slate-900">
+                <Facebook className="h-6 w-6 text-teal-200" />
               </a>
-              <a href="#" className="hover:text-cyan-400 transition">
-                <Twitter className="h-5 w-5" />
+              <a href="#" className="transition rounded-full p-2 hover:bg-white hover:text-slate-900">
+                <Twitter className="h-6 w-6 text-teal-200" />
               </a>
-              <a href="#" className="hover:text-cyan-400 transition">
-                <Instagram className="h-5 w-5" />
+              <a href="#" className="transition rounded-full p-2 hover:bg-white hover:text-slate-900">
+                <Instagram className="h-6 w-6 text-teal-200" />
               </a>
-              <a href="https://www.linkedin.com/in/md-khizer-0b31a5314?" className="hover:text-cyan-400 transition">
-                <Linkedin className="h-5 w-5" />
+              <a href="https://www.linkedin.com/in/md-khizer-0b31a5314?" className="transition rounded-full p-2 hover:bg-white hover:text-slate-900">
+                <Linkedin className="h-6 w-6 text-teal-200" />
               </a>
             </div>
           </div>
