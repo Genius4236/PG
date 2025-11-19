@@ -157,3 +157,6 @@
 2025-11-14 23:09:05 [INFO]: GET /api/owner/pgs
 2025-11-14 23:09:05 [INFO]: GET /api/owner/bookings
 2025-11-17 18:37:15 [INFO]: Server running on port 5000
+2025-11-17 18:37:52 [INFO]: Server running on port 5000
+2025-11-17 18:38:57 [INFO]: POST /api/auth/signup
+2025-11-17 18:39:44 [INFO]: POST /api/auth/login
